@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypt File</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: white;
+            width: 420px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #dd2476;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b81d63;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>🔓 Decrypt Your File</h2>
+
+        <p>Select your encrypted (.enc) file and key (.key)</p>
+
+        <!-- IMPORTANT -->
+        <form action="/decrypt" method="POST" enctype="multipart/form-data">
+
+            <!-- Encrypted File -->
+            <label>Encrypted File:</label><br>
+            <input type="file" name="enc_file" required><br><br>
+
+            <!-- Key File -->
+            <label>Key File:</label><br>
+            <input type="file" name="key_file" required><br><br>
+
+            <!-- Button -->
+            <button type="submit">Decrypt File</button>
+
+        </form>
+
+        <a href="/">⬅ Back to Home</a>
+
+    </div>
+
+</body>
+</html>
